@@ -60,6 +60,19 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "track-sdk",
+        path: "track-sdk",
+        routeBasePath: "track-sdk",
+        sidebarPath: require.resolve("./track-sdk-sidebars.js"),
+        // ... other options
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -77,6 +90,11 @@ const config = {
             docId: "intro",
             position: "left",
             label: "Tutorial",
+          },
+          {
+            to: "/track-sdk",
+            position: "left",
+            label: "Track SDK",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {

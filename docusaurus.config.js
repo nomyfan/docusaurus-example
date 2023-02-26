@@ -40,7 +40,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          includeCurrentVersion: process.env.NODE_ENV === "development",
+          // includeCurrentVersion: process.env.NODE_ENV === "development",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:

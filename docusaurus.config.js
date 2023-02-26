@@ -40,6 +40,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
+          includeCurrentVersion: process.env.NODE_ENV === "development",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -78,6 +79,12 @@ const config = {
             label: "Tutorial",
           },
           { to: "/blog", label: "Blog", position: "left" },
+          {
+            type: "docsVersionDropdown",
+            position: "right",
+            // dropdownItemsAfter: [{ to: "/versions", label: "All versions" }],
+            dropdownActiveClassDisabled: true,
+          },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",

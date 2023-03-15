@@ -4,6 +4,9 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const VERCEL_URL = process.env.VERCEL_URL;
+console.log("VERCEL_URL: ", VERCEL_URL);
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Docusaurus example',
@@ -11,10 +14,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://nomyfan.github.io',
+  url: VERCEL_URL ? 'https://'+VERCEL_URL : 'https://nomyfan.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docusaurus-example/',
+  baseUrl: VERCEL_URL ? '/' : '/docusaurus-example/',
   trailingSlash: false,
 
   // GitHub pages deployment config.
